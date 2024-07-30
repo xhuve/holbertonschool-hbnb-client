@@ -26,22 +26,38 @@
                 <p><b>Amenities:</b> 1 2 3</p>
             </div>
         </section>
-        <section id="reviews">
+        <section>
             <h1>Reviews</h1>
-            <div class="review-card">
-                <p>This is a comment</p>
-                <p>Username</p>
-                <p>1</p>
-                <button><a href="./add_review.html">Add review</a></button>
-            </div>
+            <ul class="review-list">
+                <li class="review-card">
+                    <h3>This is a comment</h3>
+                    <p>Username</p>
+                    <p>1</p>
+                    <button><a href="./add_review.html">Add review</a></button>
+                </li>
+                <li class="review-card">
+                    <h3>This is a comment</h3>
+                    <p>Username</p>
+                    <p>1</p>
+                    <button><a href="./add_review.html">Add review</a></button>
+                </li>
+            </ul>
         </section>
         <section id="add-review">
             <h2>Add a Review</h2>
             <form id="review-form">
-                <label for="review-text">Review:</label>
-                <textarea id="review-text" name="review-text" required></textarea>
+                <h4>Review:</h4>
+                <textarea class="review-text" name="review-text" required></textarea>
 
-                <button type="submit">Submit</button>
+                <h4>Rating:</h4>
+                <select id="country-filter">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button class="submit-button" type="submit">Submit</button>
             </form>
         </section>
     </main>
