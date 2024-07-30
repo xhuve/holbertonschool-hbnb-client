@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Places</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" class="logo" alt="web logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="place.html">Places</a>
+        </nav>
+    </header>
+    <main id="homepage">
+        <h1>
+            All available places
+        </h1>
+        <section id="filter">
+            <label for="country-filter">Filter by Country:</label>
+            <select id="country-filter">
+                <!-- Options will be populated dynamically -->
+            </select>
+        </section>
+        <section id="places-list">
+            <!-- List of places will be populated dynamically -->
+            <ul>
+                <li class="place-cards">
+                    <img src="#" alt="place image" class="place-image">
+                    <h3 class="place-name">Name: </h3>
+                    <p>Price per night: </p>
+                    <p>Location: </p>
+                    <button class="details-button">View Details</button>
+                </li>
+                <li class="place-cards">
+                    <img src="#" alt="place image" class="place-image">
+                    <h3 class="place-name">Name: </h3>
+                    <p>Price per night: </p>
+                    <p>Location: </p>
+                    <button class="details-button">View Details</button>
+                </li>
+                <li class="place-cards">
+                    <img src="#" alt="place image" class="place-image">
+                    <h3 class="place-name">Name: </h3>
+                    <p>Price per night: </p>
+                    <p>Location: </p>
+                    <button class="details-button">View Details</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
