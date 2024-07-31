@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 import json
-from uuid import uuid4
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 app.config.from_object('config.Config')
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 jwt = JWTManager(app)
 
