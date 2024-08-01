@@ -6,23 +6,22 @@
     <title>Add Review</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body id="add-review-page">
+<body>
     <header>
         <img src="logo.png" class="logo" alt="web logo">
         <nav>
             <a href="index.html">Home</a>
             <a id="login-link" href="login.html">Login</a>
-            <a href="place.html">Places</a>
         </nav>
     </header>
     <main>
         <form id="review-form">
             <h2>Add a Review</h2>
             <label for="place">Place:</label>
-            <input type="text" id="place" name="place" readonly>
+            <input type="text" id="review-place" name="place">
 
             <label for="review">Review:</label>
-            <textarea id="review" name="review" required></textarea>
+            <textarea id="review-desc" name="review" required></textarea>
             
             <button type="submit">Submit</button>
         </form>

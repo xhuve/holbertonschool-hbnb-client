@@ -5,7 +5,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 app.config.from_object('config.Config')
-cors = CORS(app)
+CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 jwt = JWTManager(app)
@@ -81,17 +81,17 @@ def get_place(place_id):
     return jsonify(response)
 
 @app.route('/places/<place_id>/reviews', methods=['POST'])
-@jwt_required()
 def add_review(place_id):
-    current_user_id = get_jwt_identity()
-    user = next((u for u in users if u['id'] == current_user_id), None)
+    print("Entered")
+    # current_user_id = get_jwt_identity()
+    # user = next((u for u in users if u['id'] == current_user_id), None)
 
-    if not user:
-        return jsonify({"msg": "User not found"}), 404
+    # if not user:
+    #     return jsonify({"msg": "User not found"}), 404
 
     review_text = request.json.get('review')
     new_review = {
-        "user_name": user['name'],
+        "user_name": "user-1",
         "rating": request.json.get('rating'),
         "comment": review_text,
         "place_id": place_id

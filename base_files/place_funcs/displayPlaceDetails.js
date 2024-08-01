@@ -2,14 +2,6 @@ import createElementWithText from "../utils/createElementwithText.js"
 
 export default function displayPlaceDetails(place) {
     console.log("🚀 ~ displayPlaceDetails ~ place:", place)
-    // <h1 class="place-name">Place Name</h1>
-    // <img src="#" alt="place image" class="place-image-large">
-    // <div class="place-info">
-    //     <p><b>Host:</b> Name</p>
-    //     <p><b>Price per night:</b> 100$</p>
-    //     <p><b>Description:</b> A beautiful blank</p>
-    //     <p><b>Amenities:</b> 1 2 3</p>
-    // </div>
     const place_details = document.getElementById("place-details")
 
     place_details.innerHTML = ""
