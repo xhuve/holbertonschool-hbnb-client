@@ -11,7 +11,7 @@ function renderAllPlaces(places, placesList) {
       const viewDetails = createElementWithText("button", "View place details")
       const link = createElementWithText("a")
       link.style.color = "white"
-      link.href = `place.html/${place.id}`
+      link.href = `place.html?${place.id}`
       link.appendChild(viewDetails)
 
       viewDetails.classList.add('details-button')
@@ -22,7 +22,7 @@ function renderAllPlaces(places, placesList) {
       listElement.append(link)
     
       listElement.classList.add("place-cards")
-        placesList.appendChild(listElement)
+      placesList.appendChild(listElement)
     });
   }
 

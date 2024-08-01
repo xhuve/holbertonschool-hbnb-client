@@ -6,9 +6,9 @@ async function fetchPlaces(token) {
         "Authorization": token
       }
     })
-    const data = await result.json()
+    const placesData = await result.json()
   
-    return data
+    return placesData
 }
 
 export default fetchPlaces

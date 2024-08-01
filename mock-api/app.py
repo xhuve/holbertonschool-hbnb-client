@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 import json
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.config.from_object('config.Config')
@@ -39,6 +39,7 @@ def get_places():
         {
             "id": place['id'],
             "host_id": place['host_id'],
+            "name": place["name"],
             "host_name": place['host_name'],
             "description": place['description'],
             "price_per_night": place['price_per_night'],
@@ -60,6 +61,7 @@ def get_place(place_id):
 
     response = {
         "id": place['id'],
+        "name": place["name"],
         "host_id": place['host_id'],
         "host_name": place['host_name'],
         "description": place['description'],
