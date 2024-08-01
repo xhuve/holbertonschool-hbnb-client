@@ -74,6 +74,7 @@ footer {
 #places-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: center;
     gap: 20px;
     text-align: center;
 }
