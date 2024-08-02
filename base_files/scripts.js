@@ -1,6 +1,6 @@
 import handleLoginSubmit from './auth_funcs/login.js'
 import checkAuthentication from './auth_funcs/checkAuthentication.js'
-import displayPlaces from './place_funcs/displayPlace.js'
+import displayPlaces from './place_funcs/displayPlaces.js'
 import fetchPlaceDetails from './place_funcs/fetchPlaceDetails.js'
 import fetchPlaces from './place_funcs/fetchPlaces.js'
 import getCookie from './auth_funcs/checkAuthentication.js'

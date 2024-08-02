@@ -18,12 +18,21 @@
         <form id="review-form">
             <h2>Add a Review</h2>
             <label for="place">Place:</label>
-            <input type="text" id="review-place" name="place">
+            <input type="text" class="review-input" id="review-place" name="place">
 
             <label for="review">Review:</label>
-            <textarea id="review-desc" name="review" required></textarea>
+            <textarea id="review-desc" class="review-input" name="review" required></textarea>
+
+            <h4>Rating:</h4>
+            <select id="review-rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button class="submit-button" type="submit">Submit</button>
             
-            <button type="submit">Submit</button>
         </form>
     </main>
     <footer>

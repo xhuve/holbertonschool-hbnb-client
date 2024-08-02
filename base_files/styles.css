@@ -83,7 +83,7 @@ footer {
     text-align: center;
 }
 
-#country-filter {
+#country-filter, #review-rating {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -152,6 +152,12 @@ footer {
     border: 1px solid #ddd;
     border-radius: 10px;
 }
+
+.review-input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+} 
 
 .review-text {
     padding: 5px;
