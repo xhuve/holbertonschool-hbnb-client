@@ -15,5 +15,4 @@ export default async function checkAuthentication() {
     if (addReviewSection)
       addReviewSection.style.display = 'none';
 
-    throw new Error("Authentication problem")
 }}

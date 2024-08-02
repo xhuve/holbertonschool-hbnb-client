@@ -11,7 +11,7 @@ async function handleLoginSubmit(e) {
         },
         body: JSON.stringify({email, password}),
       })
-      console.log(result)
+
       if (!result.ok) {
         throw new Error('Network response was not ok ' + result.statusText);
       }
@@ -20,7 +20,7 @@ async function handleLoginSubmit(e) {
       document.cookie = `jwt=${content.access_token}`
       window.location.replace("index.html")
     } catch (error) {
-      alert(error)
+      alert("Cannot login user")
     }
   }
 

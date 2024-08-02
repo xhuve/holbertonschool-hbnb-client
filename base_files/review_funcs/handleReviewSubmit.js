@@ -30,10 +30,9 @@ export default async function handleReviewSubmit(e) {
         } else {
             placeId.value = ""
             reviewText.value = ""
-
         }
         
     } catch (error) {
-        alert(error)
+        alert("Error while submitting review")
     }
 }

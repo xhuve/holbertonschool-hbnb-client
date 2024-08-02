@@ -109,7 +109,7 @@ footer {
     box-shadow: var(--default-shadow);
 }
 
-.details-button {
+.common-button {
   align-items: center;
   background-color: #fa6400;
   border: 1px solid transparent;
@@ -121,7 +121,7 @@ footer {
   justify-content: center;
   line-height: 1.25;
   min-height: 3rem;
-  padding: 0.3rem 1.5rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   width: auto;
 }
@@ -147,7 +147,7 @@ footer {
 }
 
 .login-input {
-    padding: 5px;
+    padding: 0.5rem;
     width: 20%;
     border: 1px solid #ddd;
     border-radius: 10px;

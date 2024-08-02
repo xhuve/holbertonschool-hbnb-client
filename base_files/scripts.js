@@ -14,30 +14,27 @@ document.addEventListener('DOMContentLoaded', async () => {
   const reviewForm = document.getElementById("review-form")
   const token = getCookie('jwt');
 
-  if (placesList){
-    try {
+    if (placesList){
+        await checkAuthentication()
+        const placesData = await fetchPlaces(token); 
+        displayPlaces(placesData, placesList)
+
+      }
+    
+    if (placePage){
       await checkAuthentication()
-      const placesData = await fetchPlaces(token); 
-      displayPlaces(placesData, placesList)
-
-    } catch (error) {
-      console.log(error)
+      const placeData = await fetchPlaceDetails(token)
+      displayPlaceDetails(placeData)
     }
-  }
+    
+    if(loginForm){
+      loginForm.addEventListener("submit", handleLoginSubmit)
+    }
+    
+    if (reviewForm) {
+      await checkAuthentication()
+      reviewForm.addEventListener("submit", handleReviewSubmit)
+    }
 
-  if (placePage){
-    await checkAuthentication()
-    const placeData = await fetchPlaceDetails(token)
-    displayPlaceDetails(placeData)
-  }
-
-  if(loginForm){
-    loginForm.addEventListener("submit", handleLoginSubmit)
-  }
-
-  if (reviewForm) {
-    await checkAuthentication()
-    reviewForm.addEventListener("submit", handleReviewSubmit)
-  }
 
 })
